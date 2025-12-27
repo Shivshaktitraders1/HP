@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shiv Shakti Traders | General Store</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #000;
+      color: #f5d27a;
+    }
+    header {
+      text-align: center;
+      padding: 30px 20px;
+      background: #000;
+      border-bottom: 2px solid #d4af37;
+    }
+    header img {
+      max-width: 220px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #111;
+      border: 1px solid #d4af37;
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #ffd700;
+      border-bottom: 1px solid #d4af37;
+      padding-bottom: 10px;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #ffd700;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid #d4af37;
+      font-size: 0.95rem;
+      background: #000;
+    }
+    a {
+      color: #ffd700;
+      text-decoration: none;
+    }
+    input, textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 12px;
+      background: #ffd700;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Shiv Shakti Traders Logo" />
+  <h1>SHIV SHAKTI TRADERS</h1>
+  <p>No Need To Worry With Shiv Shakti Traders</p>
+</header>
+
+<section>
+  <div class="card">
+    <h2>About Our Store</h2>
+    <p><span class="highlight">Shiv Shakti Traders</span> is a trusted general store providing quality grocery and daily-need items at affordable prices for our local community.</p>
+  </div>
+
+  <div class="card">
+    <h2>Address</h2>
+    <p>
+      Post Hiranpur<br />
+      City: Pakur<br />
+      State: Jharkhand (India)
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Contact</h2>
+    <p>Phone: <a href="tel:8709949353">8709949353</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Our Products</h2>
+    <ul>
+      <li>Rice, Wheat, Dal & Pulses</li>
+      <li>Spices & Dry Fruits</li>
+      <li>Oil, Ghee & Grocery Items</li>
+      <li>Patanjali Products</li>
+      <li>Snacks, Biscuits & Packed Foods</li>
+      <li>Household & Daily Essentials</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Product Gallery</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px;">
+      <img src="image.png" style="width:100%;border-radius:8px;" />
+      <img src="image2.png" style="width:100%;border-radius:8px;" />
+      <img src="image3.png" style="width:100%;border-radius:8px;" />
+      <img src="image4.png" style="width:100%;border-radius:8px;" />
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Online Order Form</h2>
+    <form onsubmit="sendOrder(event)" style="display:grid;gap:15px;">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="phone" placeholder="Mobile Number" required />
+      <textarea id="items" placeholder="Items you want to order" required></textarea>
+      <button type="submit">Send Order on WhatsApp</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Order Directly</h2>
+    <p><a href="https://wa.me/918709949353" target="_blank">Click here to order on WhatsApp</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Shiv Shakti Traders. All Rights Reserved.
+</footer>
+
+<script>
+  function sendOrder(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var items = document.getElementById('items').value;
+    var message = `New Order from Website%0AName: ${name}%0APhone: ${phone}%0AItems: ${items}`;
+    window.open(`https://wa.me/918709949353?text=${message}`, '_blank');
+  }
+</script>
+
+</body>
+</html>
